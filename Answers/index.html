@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Курс Базовый JavaScript</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Урок 1</legend>
+        <button class="task-button" data-num="1.1">Задание №1: Конвертер температуры</button>
+        <button class="task-button" data-num="1.2">Задание №2: Работа с переменными, вывод имени</button>
+        <div class="task-block">
+            <p class="task-text">Задание №3: Чему будет равно JS-выражение 1000 + "108"? </p>
+            <p class="solution-text">После конкатенации будет "1000108" типа string.</p>
+        </div>
+        <div class="task-block">
+            <p class="task-text">Задание №4: Самостоятельно разобраться с атрибутами тега script (async и defer). </p>
+            <p class="solution-text">Разница между async и defer: атрибут defer сохраняет относительную последовательность скриптов, а async – нет. defer всегда ждёт, пока весь HTML документ будет готов, а async – нет.</p>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Урок 2</legend>
+        <div class="task-block">
+            <p class="task-text">Задание №1: Дан код:<br>
+                <b class="code">
+                    var a = 1, b = 1, c, d;<br>
+                    c = ++a; alert(c);           // 2<br>
+                    d = b++; alert(d);           // 1<br>
+                    c = (2+ ++a); alert(c);      // 5<br>
+                    d = (2+ b++); alert(d);      // 4<br>
+                    alert(a);                    // 3<br>
+                    alert(b);                    // 3<br>
+                </b>
+                Почему код даёт именно такие результаты?
+            </p>
+            <p class="solution-text">1) ++a операция инкремента, a = 1 + 1 = 2.<br>
+            2) b++ постинкремент - сначала переменной присваивается значение, а потом значение b увеличивается на 1.<br>
+            3) Прежде переменная a стала равна 2. Теперь инкрементируется еще и равна 3. 2 + 3 = 5.<br>
+            4) После предыдущего постинкремента b = 2. 2 + 2 = 4. Далее переменная b увеличивается еще на 1.<br>
+            5) Из прошлых пунктов ясно, что a = 3 и b после постинкремента стала равна 3.</p>
+        </div>
+        <div class="task-block">
+            <p class="task-text">Задание №2: Чему будет равен x в примере ниже?<br>
+                <b class="code">
+                    var a = 2;<br>
+                    var x = 1 + (a *= 2);<br>
+                </b>
+            </p>
+            <p class="solution-text">x будет равен 5.</p>
+        </div>
+        <button class="task-button" data-num="2.3">Задание №3: Работа с переменными, знаки переменных</button>
+        <button class="task-button" data-num="2.4">Задание №4: Вывод чисел до 15</button>
+        <button class="task-button" data-num="2.5/6">Задание №5 / 6: Арифметические операторы</button>
+        <div class="task-block">
+            <p class="task-text">Задание №7: Сравнить null и 0. Попробуйте объяснить результат. </p>
+            <p class="solution-text">0 является конкретным числом, которое можно использовать в вычислениях или в качестве логического false, null же означает пустую переменную, которой впоследствии можно присвоить значение любого типа.</p>
+        </div>
+        <button class="task-button" data-num="2.8">Задание №8: Возведение в степень</button>
+        <button class="task-button" data-num="2.9">Доп. задание: Преобразование в строку</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Урок 3</legend>
+        <button class="task-button" data-num="3.1">Задание №1: Вывод простых чисел от 0 до 100</button>
+        <button class="task-button disabled" data-num="3.2/3">Задание №2 / 3: Подсчет стоимости товаров в корзине</button>
+        <button class="task-button" data-num="3.4">Задание №4: Вывод чисел без тела цикла</button>
+        <button class="task-button" data-num="3.5">Задание №5: Пирамида из символов "X"</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Урок 4</legend>
+        <button class="task-button" data-num="4.1">Задание №1: Преобразование числа в объект</button>
+        <button class="task-button" data-num="4.2">Задание №2: Подсчет стоимости товаров в корзине (объекты)</button>
+    </fieldset>
+    <script src="script.js"></script>
+</body>
+</html>

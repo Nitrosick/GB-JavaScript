@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #272727;
+    font-family: 'Calibri', serif;
+    color: #fffafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+div {
+    margin: 30px 0;
+}
+
+.slider-window {
+    display: flex;
+    position: relative;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.slider-window button {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    border: none;
+    font-family: 'Calibri', serif;
+    color: #fffafa;
+    text-shadow: 1px 1px 4px #272727;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.left {
+    left: 0;
+    background: linear-gradient(90deg, #272727, transparent);
+}
+
+button.right {
+    right: 0;
+    background: linear-gradient(90deg, transparent, #272727);
+}
+
+.slider {
+    margin: 0;
+    display: flex;
+    transition: 0.3s ease-out;
+}
+
+.slider img {
+    width: 100px;
+}
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-info {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+table {
+    font-size: 20px;
+    border-spacing: 0;
+}
+
+td, th {
+    border-bottom: 1px solid grey;
+    padding: 10px;
+    text-align: center;
+}
+
+.buy-button {
+    background-color: #303030;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: transparent;
+    transition: 0.3s;
+}

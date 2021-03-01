@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    
+    var sum, perc;
+    
+    do {
+        sum = +prompt("Введите сумму вклада");
+        perc = +prompt("Введите процент");
+    } while (isNaN(sum) && isNaN(perc))
+    
+    var array = [];
+        
+    for (let i=0; i<5; i++) {
+        sum += sum * (perc / 100);
+        array.push(sum.toFixed(2));
+    }
+    
+    for (let a of array) {
+        document.write(a + '<br>');
+    }
+    
+</script>

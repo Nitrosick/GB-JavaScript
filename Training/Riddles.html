@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+    var winCount = 0;
+    var userAnswer;
+	
+	function riddle(answer, array) {
+		for (let a of array) {
+			if (a == answer) {
+				winCount++;
+				return 'Совершенно верно!';
+			}
+		}
+		return 'Ответ неверный, правильный ответ: ' + array[0];
+	}
+    
+    userAnswer = prompt("Загадка: 'Ларец, без ключа закрыт, слиток золота хранит'. Что это?");
+	alert(riddle(userAnswer, ['Яйцо', 'яйцо', 'яичко']));
+	
+	userAnswer = prompt("Загадка: 'Висит груша - нельзя скушать'. Что это?");
+	alert(riddle(userAnswer, ['Лампочка', 'лампочка', 'Лампа', 'лампа']));
+	
+	userAnswer = prompt("Загадка: 'То висячий, то стоячий, то холодный, то горячий'. Что это?");
+	alert(riddle(userAnswer, ['Душ', 'душ']));
+    
+    alert('Вы смогли правильно ответить на ' + winCount + ' загадок(ки)');
+	
+</script>

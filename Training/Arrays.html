@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    
+    // Последовательность чисел от 1 до n
+	function arrayMaker(n) {
+		var arr = [];
+		for (let i = 1; i<=n; i++) {arr.push(i);}
+		return arr;
+	}
+	
+	// Сумма чисел массива
+	function arraySum(array) {
+		var sum = 0;
+		for (let a of array) {sum += parseInt(a);}
+		return sum;
+	}
+	
+	// Наибольшее значение
+	function maxNum(array) {
+		array.sort(function(a, b) {return a - b});
+		return array[array.length - 1];
+	}
+	
+	// Наименьшее значение
+	function minNum(array) {
+		array.sort(function(a, b) {return a - b});
+		return array[0];
+	}
+	
+	// Четные числа из массива
+	function evenNum(array) {
+		var arr = [];
+		for (let a of array) {if (a%2 == 0) arr.push(a);}
+		return arr;
+	}
+	
+	var t = +prompt('Введите целое число');
+	document.write('Последовательность чисел от 1 до ' + t + ': ' + arrayMaker(t) + '<br>');
+	var numbers = prompt('Введите последовательность чисел через Пробел');
+	var numArray = numbers.split(' ');
+	document.write('Сумма чисел массива: ' + arraySum(numArray) + '<br>');
+	document.write('Наибольшее значение массива: ' + maxNum(numArray) + '<br>');
+	document.write('Наименьшее значение массива: ' + minNum(numArray) + '<br>');
+	document.write('Четные значения массива: ' + evenNum(numArray));
+    
+</script>

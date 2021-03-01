@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    var number = Math.round(Math.random() * 100);
+    var player = 1;
+    var win = false;
+    var answer = prompt('Введите число от 0 до 100, угадывает игрок ' + player + ' . Если надоело играть, введите слово Хватит');
+    while (!win) {
+        if (parseInt(answer) == number) {
+            alert('Игрок ' + player + ' победил! Поздравляем!');
+            win = true;
+        }
+        else if (parseInt(answer) > number) {
+            alert('Число слишком большое, угадывает другой игрок');
+            if (player == 1) {
+                player = 2;
+            }
+            else {
+                player = 1;
+            }
+            answer = prompt('Введите число от 0 до 100, угадывает игрок ' + player);
+        }
+        else if (parseInt(answer) < number) {
+            alert('Число слишком маленькое, угадывает другой игрок');
+            if (player == 1) {
+                player = 2;
+            }
+            else {
+                player = 1;
+            }
+            answer = prompt('Введите число от 0 до 100, угадывает игрок ' + player);
+        }
+        else if (answer == 'Хватит') {
+            alert('Игра окончена, игрок ' + player + ' сдался');
+            win = true;
+        }
+        else {
+            alert('Введено некорректное число');
+            answer = prompt('Введите число от 0 до 100, угадывает игрок ' + player + ' . Если надоело играть, введите слово Хватит');
+        }
+    }
+</script>
